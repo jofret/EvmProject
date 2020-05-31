@@ -51,8 +51,17 @@
                 <a href="{{ route('post', $product->slug) }}" class="product-item md-height bg-gray d-block">
                   <img src="{{$product -> file}}" alt="{{$product -> name}}" class="img-fluid">
                 </a>
-                <h2 class="item-title"><a href="{{ route('post', $product->slug) }}">{{$product -> name}}</a></h2>
-                <strong class="item-price">S/{{$product -> pricing}}</strong>
+                <div>
+                  <div class="row">
+                    <div class="col-6">
+                      <h2 class="item-title"><a href="{{ route('post', $product->slug) }}">{{$product -> name}}</a></h2>
+                      <p><strong class="item-price">S/{{$product -> pricing}}</strong></p>
+                    </div>
+                    <div class="col-6">
+                      <a href="{{ route('post', $product->slug) }}"><button type="button" class="btn btn-success btn-sm">Más Info <i class="lni lni-arrow-right"></i></button></a>
+                    </div>
+                  </div>
+                </div>
               </div>
               @endforeach
             </div>

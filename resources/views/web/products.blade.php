@@ -42,15 +42,17 @@
                 </div>
               </div>
             </div> -->
-
+            <div class="d-block d-sm-none">
+              @include('includes.categories')
+            </div>
             <div class="row mb-5">
               @foreach($products as $product)
               <div class="col-lg-6 col-md-6 item-entry mb-4">
                 <a href="{{ route('post', $product->slug) }}" class="product-item md-height bg-gray d-block">
                   <img src="{{$product -> file}}" alt="{{$product -> name}}" class="img-fluid">
                 </a>
-                
-                <strong class="item-price">{{$product -> category_id}}</strong>
+                <h2 class="item-title"><a href="{{ route('post', $product->slug) }}">{{$product -> name}}</a></h2>
+                <strong class="item-price">S/{{$product -> pricing}}</strong>
               </div>
               @endforeach
             </div>

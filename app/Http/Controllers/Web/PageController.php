@@ -15,27 +15,7 @@ class PageController extends Controller
     
     public function catalogo(){
 
-        /*Product::select('product.name')
-       ->join('categories', 'products.category_id', '=', 'categories.id')
-       ->whereRaw("products.created_at = (SELECT MAX(products.created_at) FROM products)")
-       ->get();*/
-        /*$products = Category::addSelect([
-                                        "ultimo_anadido" => function($query) {
-                                        $query->select("name")
-                                                ->from("posts")
-                                                ->whereColumn("category_id", "categories.id")
-                                                ->take(1)
-                                                ->latest(); }
-                                        ])->get();
-*/
-        $products = Category::addSelect(["ultimo_anadido" => function($query) {
-                    $query->select("name")
-                          ->from("posts")
-                          ->whereColumn("category_id", "categories.id")
-                          ->limit(1)
-                          ->latest();
-                }])->get();
-                    
+        $products = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->where('category_id',1)->get();
 
         $categories = Category::all();
 
@@ -70,7 +50,6 @@ class PageController extends Controller
 
         return view('web.posts', compact('posts','category','categories','plans'));
     }
-
 
     public function tag($slug){ 
         

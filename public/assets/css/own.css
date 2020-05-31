@@ -1,0 +1,96 @@
+/*own.css*/
+
+.site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #25262a;
+    letter-spacing: .2em;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px solid #25262a;
+}
+
+.site-section-heading:before {
+    content: "";
+    left: 0%;
+    top: 0;
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background: #ee4266;
+}
+
+/*nav*/
+.site-navbar .site-navigation .site-menu > li > a {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #25262a;
+    font-size: 15px;
+    text-decoration: none !important;
+}
+/**/
+
+ .site-logo a {
+
+    border: none;
+
+}
+
+section img{
+	width: 99%;
+	margin: 5% auto 2.5% auto;
+	/*margin: 20px auto 2.5% auto;*/
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+.loves{
+	font-family:loves;
+}
+
+section p{
+ font-family:Cocogoose;
+ font-weight: 600;
+ color:#111111;
+}
+
+.site-blocks-cover .loreal  h3{
+	font-family:loves;
+	color:white;
+	font-size: 30px
+}
+
+
+
+
+
+@media only screen and (min-width:992px) {
+
+	.lookbook-summer .uno img{
+		height: 540px
+	}
+
+	.lookbook-summer .dos img{
+		height: 946px
+	}
+
+	/*.lookbook-summer .cinco img{
+		height: 986px
+	}*/
+}
+
+
+.site-footer .footer-heading {
+    font-size: 16px;
+    color: #25262a;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+
+
+.prendas p{
+    color:#333;
+}
